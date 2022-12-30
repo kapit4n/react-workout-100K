@@ -1,10 +1,13 @@
 import os 
 import pathlib
 
-fReadme = open("./Readme.md", "w")
 
+# config options
 ext = 'js'
+ignore_file = './src-ig'
+readmeFileName = "./Readme.md"
 
+fReadme = open(readmeFileName, "w")
 def countLines(path):
     count = 0
     for f in os.listdir(path):
@@ -14,14 +17,14 @@ def countLines(path):
             fCount = len(open(fPath).readlines())
             fReadme.write(str(f) + "(" + str(fCount) + "), ")
             count = count + fCount
-    fReadme.write("S(" + str(count) + ")\n")
+    fReadme.write("\nS(" + str(count) + ")\n")
     return count
 
 
 total = 0
 fReadme.write("## Categories")
-for f in os.listdir('./src-ig'):
-    pathFull = "./src-ig/" + f
+for f in os.listdir(ignore_file):
+    pathFull = ignore_file + "/" + f
     fReadme.write("\n## " + str(f).upper() + "\n")
     if (os.path.isdir(pathFull)):
         total = total + countLines(pathFull)
