@@ -6,7 +6,7 @@ extensions = ['.js', '.tsx']
 ignore_file = './src-ig'
 src_file = './src'
 readmeFileName = "./Readme.md"
-machineName = 'mc.house.txt'
+machineName = 'ln.house.txt'
 
 fReadme = open(readmeFileName, "w")
 def countLines(path):
@@ -23,9 +23,10 @@ def countLines(path):
 
 
 total = 0
+
 fReadme.write("## Categories")
 
-for x_file in [ignore_file, src_file]:
+for x_file in [ignore_file]:
     total = total + countLines(x_file)
     for f in os.listdir(x_file):
         pathFull = x_file + "/" + f
@@ -33,7 +34,19 @@ for x_file in [ignore_file, src_file]:
         if (os.path.isdir(pathFull)):
             total = total + countLines(pathFull)
 
-print(total)
+
+fMachine = open(machineName, "w")
+fMachine.write(str(total))
+
+
+for x_file in [src_file]:
+    total = total + countLines(x_file)
+    for f in os.listdir(x_file):
+        pathFull = x_file + "/" + f
+        fReadme.write("\n## " + str(f).upper() + "\n")
+        if (os.path.isdir(pathFull)):
+            total = total + countLines(pathFull)
+
 
 for cfile in os.listdir("."):
     if cfile.endswith(".house.txt") and not cfile.endswith(machineName):
@@ -43,8 +56,6 @@ for cfile in os.listdir("."):
             fReadme.write("\n# Other Total \n" + str(otherTotal))
             total = total + otherTotal
 
-fMachine = open(machineName, "w")
-fMachine.write(str(total))
 
+print(total)
 fReadme.write("\n# Total \n" + str(total))
-
