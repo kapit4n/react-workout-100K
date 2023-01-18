@@ -24,6 +24,6 @@ react-18-notes.js(38),
 S(38)
 
 # Other Total 
-248
+702
 # Total 
-470
+924
