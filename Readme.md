@@ -9,6 +9,10 @@ S(71)
 index-01-04-2023.js(45), 
 S(45)
 
+## TOOLS
+auth-01-17-2023.js(35), 
+S(35)
+
 ## FEATURES
 useEffect-01-04-2023.js(33), 
 S(33)
@@ -22,4 +26,4 @@ S(38)
 # Other Total 
 248
 # Total 
-435
+470
