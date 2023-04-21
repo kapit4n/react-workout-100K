@@ -10,8 +10,8 @@ S(39)
 ## COMPONENTS-03-08-2023.TS
 
 ## FRAMEWORKS
-react-native-03-09-2023.js(206), next-js-04-19-2023.js(106), chatbot-01-04-2023.js(71), 
-S(383)
+react-native-03-09-2023.js(206), next-js-04-19-2023.js(106), chatbot-01-04-2023.js(71), next-js-04--21-2023.js(193), 
+S(576)
 
 ## REACT-18
 index-01-04-2023.js(45), 
@@ -38,4 +38,4 @@ S(38)
 # Other Total 
 702
 # Total 
-1672
+1865
