@@ -2,7 +2,7 @@ import os
 import pathlib
 
 # config options
-extensions = ['.js', '.ts']
+extensions = ['.js', '.ts', '.tsx']
 ignore_file = './src-ig'
 src_file = './src'
 readmeFileName = "./Readme.md"
@@ -57,5 +57,12 @@ for cfile in os.listdir("."):
             total = total + otherTotal
 
 
-print(total)
+goal = 3000
+
+print("Goal: {}".format(goal))
+
+print("Total: {}".format(total))
+
+print(f"To reach the goal: {goal - total}")
+
 fReadme.write("\n# Total \n" + str(total))
